@@ -1,15 +1,33 @@
-
-<div class="logForm" style="background-image: url('{{randImg}}')">
-  <a href="#/register">Register</a>
-  <div class="dashboarfBox">
-    <div id="logIn">
-      <h1>DASHBOARF</h1>
-      <form ng-submit="login(loginUser)">
-          <label>Login</label><br>
-          <label>Username <input type="text" ng-model="loginUser.username"></label><br>
-          <label>Password <input type="text" ng-model="loginUser.password"></label><br>
-          <button>Submit</button>
+<div class="container text-right">
+  <h3><a href="#/register" class="text-right a">Register</a></h3>
+</div>
+<div class="container" >
+  <div class="container text-center m-b-3">
+    <div>
+      <h1 class="headerLogo">DASHBOARF</h1>
+      <h4><em>A Way to Link with Friends!<em></h4>
+      <form class="form-inline">
+        <div class="form-group">
+          <label class="sr-only" for="username">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Username" ng-model="loginUser.username">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" ng-model="loginUser.password">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="login(loginUser)">Sign in</button>
       </form>
     </div>
   </div>
+</div>
+<div class="container text-center marginButton">
+  <button type="submit" class="btn btn-default" ng-click="fbLogin()"> Login with Facebook!</button>
+</div>
+<div class="container m-t-4 text-center space">
+  <img src="{{randImg}}"  class="img-thumbnail">
 </div>

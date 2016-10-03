@@ -18,6 +18,7 @@ module.exports = function(app){
 	app.get('/userpage/:id', topics.getUserID);
 	// app.get('/topic/:id', topics.getOne);
 	app.get('/user', users.edit)
+	app.get('/getAll', users.getAll)
 	app.post('/editUser', users.editUser)
 	app.post('/messages/', topics.createMessage)
 	app.use(userAuth);

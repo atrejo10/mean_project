@@ -1,9 +1,9 @@
-body
+/*body
 {
   /*background-color:#1FC2AD;*/
-}
+/*}*/
 
-h1{
+/*h1{
   font-family:'Courgette', sans-serif;
 
 }
@@ -48,11 +48,9 @@ form .progress {
     width: 0;
 }
 
-img{
-  width:30em;
-}
 
-.well{
+
+/*.well{
 padding-right:25px;
 display: inline-block;
 }
@@ -60,9 +58,9 @@ display: inline-block;
   display:inline-block;
   margin-right:40px;
 }
- #editForm{
+ #editForm{*/
   /*border:5px solid black;*/
-  margin-top:10px;
+  /*margin-top:10px;
   width:400px;
   margin-left:350px;
 }
@@ -81,9 +79,9 @@ display: inline-block;
 }
 
 .header {
-    display: table;
+    display: table;*/
     /*position: relative;*/
-    width: 100%;
+    /*width: 100%;
     height: 100%;
     background: url(bg.jpg) no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -99,9 +97,9 @@ display: inline-block;
 
 .profile p {
   text-align:center;
-}
+}*/
 
-#logIn{
+/*#logIn{
   font-family:'Raleway', sans-serif;
   text-align:center;
   font-size:20px;
@@ -110,15 +108,44 @@ display: inline-block;
   padding-top:300px;
   /*border: 1px dotted red;
   height: 100px;*/
+/*}*/
+body{
+  background-color: grey;
 }
-
-#logIn h1{
+.headerLogo{
   font-size:50px;
-  font-family:'Monoton', cursive;
+  font-family:'Monoton', sans-serif;
   color: white;
-  background-color: black;
+  text-shadow: 5px 5px 7px #000000;
 }
-
+#start{
+  font-size:80px;
+  font-family:'Monoton', sans-serif;
+  color: white;
+  text-shadow: 5px 5px 7px #000000;
+  margin-top: 3em;
+}
+.a{
+  color: black;
+}
+img{
+  width:30em;
+}
+.space{
+  padding-top: 1em;
+}
+.colorLinks{
+  color: white;
+  font-size: 25px
+}
+.targetLogin{
+  text-shadow: 5px 5px 7px #000000;
+  padding-top: 3em;
+}
+.marginButton{
+  padding-top: 1em;
+}
+/*
 #logIn label{
   font-size:25px;
   font-weight: bold;
@@ -137,16 +164,16 @@ display: inline-block;
   height:60em;
   background:no-repeat center center scroll;
   width: 100%;
-  background-size: cover;
+  background-size: cover;*/
   /*opacity:0.6;*/
   /*height:100%;*/
-}
+/*}
 
 .logForm a {
   margin-left: 1800px;
   font-size: 25px;
   color: white;
-}
+}*/
 
 /*.dashboarfBox {
   height: 100px;

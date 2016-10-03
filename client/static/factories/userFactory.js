@@ -19,7 +19,6 @@ app.factory('UserFactory', ['$http', function($http){
                 callback();
             })
         },
-
         editPuser: function(user, callback){
         $http({
           method:"POST",
@@ -46,7 +45,32 @@ app.factory('UserFactory', ['$http', function($http){
           }).then(function(res){
             callback(res.data);
           })
+        },
+        getAll: function(callback){
+          $http({
+            method: "GET",
+            url: "/getAll"
+          }).then(function(res){
+            callback(res.data)
+          })
         }
-    }
-
+      }
+    // createFacebookUser:function(user, callback){
+    //         $http({
+    //             method:"POST",
+    //             url:"/userss",
+    //             data:user
+    //         }).then(function(user){
+    //             callback();
+    //         })
+    //     },
+    //     fbLogin:function(user,callback){
+    //         $http({
+    //             method:"POST",
+    //             url:"/logins",
+    //             data:user
+    //         }).then(function(user){
+    //             callback();
+    //         })
+    //     }
 }])

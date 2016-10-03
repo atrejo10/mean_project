@@ -16,6 +16,15 @@ module.exports = {
             });
         }
    },
+	 getAll: function(req,res){
+		 User.find({}).exec(function(err,users){
+			 if(err){
+				 res.sendStatus(400)
+			 }else{
+				 res.json(users)
+			 }
+		 })
+	 },
     login:function(req,res){
       console.log("In my users");
         User.findOne({username:req.body.username}).exec(function(err,user){

@@ -21,13 +21,7 @@ app.controller('TopicsController', ['$scope','$http', '$location', '$routeParams
     })
   }
   getHTML();
-  function getUser(){
-    UserFactory.loggedIn(function(user){
-      console.log(user)
-      $scope.current_user = user;
-    })
-  }
-  getUser();
+
   $scope.submit = function() {
      if ($scope.form.file.$valid && $scope.file) {
        $scope.upload($scope.file);
@@ -77,6 +71,20 @@ app.controller('TopicsController', ['$scope','$http', '$location', '$routeParams
               getHTML();
             })
         }
+        function getUsers(){
+          UserFactory.getAll(function(users){
+            console.log(users)
+            $scope.users = users;
+          })
+        }
+        getUsers();
+        function getUser(){
+          UserFactory.loggedIn(function(user){
+            console.log(user)
+            $scope.current_user = user;
+          })
+        }
+        getUser();
 
 
 }])

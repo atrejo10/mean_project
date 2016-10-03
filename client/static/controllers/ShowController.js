@@ -1,4 +1,4 @@
-app.controller('ShowController', ['$scope','$http','$location',"$window", 'TopicFactory', 'MessageFactory', '$routeParams', function($scope, $http, $location, $window, TopicFactory, MessageFactory, $routeParams){
+app.controller('ShowController', ['$scope','$http','$location',"$window", 'TopicFactory', 'MessageFactory', '$routeParams', 'UserFactory', function($scope, $http, $location, $window, TopicFactory, MessageFactory, $routeParams, UserFactory){
   function getHTML(){
     // topics._id = $routeParams.id
     TopicFactory.getTopicsOfUser($routeParams.id, function(topics){
@@ -25,6 +25,13 @@ app.controller('ShowController', ['$scope','$http','$location',"$window", 'Topic
     $window.localStorage.clear();
     $location.path('/')
   }
+  function getUser(){
+    UserFactory.loggedIn(function(user){
+      console.log(user)
+      $scope.current_user = user;
+    })
+  }
+  getUser();
 // $scope.topics = function(topics){
 //   topics._id = $routeParams.id
 //   TopicFactory.show(topics,function(){
